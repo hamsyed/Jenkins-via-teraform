@@ -15,6 +15,7 @@ resource "aws_instance" "hellow-world" {
   "sudo yum install jenkins -y",
   "sudo systemctl start jenkins",
   "sudo systemctl status jenkins",
+  "sudo yum install git -y", 	   
   "wget https://releases.hashicorp.com/terraform/0.15.4/terraform_0.15.4_linux_amd64.zip",
   "wget https://apache.mirror.digitalpacific.com.au/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip",
   "unzip terraform_0.15.4_linux_amd64.zip",
