@@ -22,6 +22,7 @@ resource "aws_instance" "hellow-world" {
   "sudo mv terraform /usr/local/bin/terraform",
   "sudo mv apache-maven-3.8.1 /opt",
   "terraform version",
+  "cat /var/lib/jenkins/secrets/initialAdminPassword", 	   
   "echo #########   all commands executed successfuly !! ##########",
   ]
 
