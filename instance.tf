@@ -16,18 +16,22 @@ resource "aws_instance" "hellow-world" {
   "sudo yum install jenkins -y",
   "sudo systemctl start jenkins",
   "sudo systemctl status jenkins",
-  "sudo yum install git -y", 	   
-  "wget https://releases.hashicorp.com/terraform/0.15.4/terraform_0.15.4_linux_amd64.zip",
+  "sudo yum install git -y",
+  #sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+  "sudo yum install terraform -y",
   "wget https://apache.mirror.digitalpacific.com.au/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip",
-  "unzip terraform_0.15.4_linux_amd64.zip",
   "unzip apache-maven-3.8.1-bin.zip",
-  "sudo mv terraform /usr/local/bin/terraform",
   "sudo mv apache-maven-3.8.1 /opt",
+  "sudo yum install awscli",
+  "sudo yum install git -y ",
+  "sudo yum install docker -y ",
+  "sudo systemctl start docker",
+  "sudo systemctl status docker",
+  "sudo aws cli --version",
   "terraform version",
-  "sudo cat /var/lib/jenkins/secrets/initialAdminPassword", 	   
+  "sudo cat /var/lib/jenkins/secrets/initialAdminPassword",
   "echo #########   all commands executed successfuly !! ##########",
   ]
-
  connection {
         type = "ssh"
         user = "ec2-user"
